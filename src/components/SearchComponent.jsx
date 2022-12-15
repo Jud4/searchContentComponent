@@ -14,19 +14,21 @@ const SearchComponent = ({ onGetQuery }) => {
 
 
     return (
-        <form className="d-flex" onSubmit={onSubmit}>
-            <input
-                type="search"
-                className="form-control me-1.5"
-                placeholder="Search Album"
-                aria-label="Search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-            />
-            <button className="btn btn-outline-success m-1.5" type="submit">
+        <div class="input-group">
+            <div class="form-outline">
+                <input
+                        type="search"
+                        className="form-control"
+                        placeholder="Search Album"
+                        aria-label="Search"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                    />
+            </div>
+            <button className="btn btn-outline-primary" type="submit" onClick={onSubmit}>
                 Search
             </button>
-        </form>
+      </div>
     )
 };
 
