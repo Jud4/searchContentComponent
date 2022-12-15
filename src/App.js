@@ -19,7 +19,7 @@ function App() {
     // Cleaning Album's data
     const cleanedResults = results.map(album => {
       const container = {
-        albumCover: album.artworkUrl100,
+        imageCover: album.artworkUrl100,
         albumName: album.collectionName,
         artistName: album.artistName,
         price: album.collectionPrice+' '+album.currency
