@@ -14,20 +14,23 @@ const SearchComponent = ({ onGetQuery }) => {
 
 
     return (
-        <div class="input-group">
-            <div class="form-outline">
-                <input
-                        type="search"
-                        className="form-control"
-                        placeholder="Search Album"
-                        aria-label="Search"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                    />
-            </div>
-            <button className="btn btn-outline-primary" type="submit" onClick={onSubmit}>
-                Search
-            </button>
+      <div className="container">
+        <div class="input-group justify-content-end">
+                <div class="form-outline">
+                    <input
+                            type="search"
+                            className="form-control me-2 mb-2 mt-2"
+                            placeholder="Search Album"
+                            aria-label="Search"
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                        />
+                </div>
+                <button className="btn btn-outline-primary mb-2 mt-2" type="submit" onClick={onSubmit}>
+                    Search
+                </button>
+        </div>
+
       </div>
     )
 };

@@ -2,6 +2,7 @@ import Card from "./Card";
 
 const CardContainer = ({albumsList}) => {
     return (
+      <div className="container">
         <div className="row">
           {albumsList.map((album) => (
             <div className="col">
@@ -9,6 +10,7 @@ const CardContainer = ({albumsList}) => {
             </div>
           ))}
         </div>
+      </div>
       );
 };
 
