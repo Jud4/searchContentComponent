@@ -15,8 +15,9 @@ const SearchComponent = ({ onGetQuery }) => {
 
     return (
       <div className="container">
-        <div class="input-group justify-content-end">
-                <div class="form-outline">
+        <div className="input-group justify-content-end">
+            <form className="form-outline d-flex" onSubmit={onSubmit}>
+                <div>
                     <input
                             type="search"
                             className="form-control me-2 mb-2 mt-2"
@@ -26,9 +27,10 @@ const SearchComponent = ({ onGetQuery }) => {
                             onChange={(e) => setQuery(e.target.value)}
                         />
                 </div>
-                <button className="btn btn-outline-primary mb-2 mt-2" type="submit" onClick={onSubmit}>
+                <button className="btn btn-outline-primary mb-2 mt-2" type="submit">
                     Search
                 </button>
+            </form>
         </div>
 
       </div>

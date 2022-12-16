@@ -1,6 +1,7 @@
 import SearchComponent from "./components/SearchComponent";
 import { useState } from "react";
-import CardContainer from "./components/CardContainer";
+import CardContainer from "./components/AlbumCatalogComponent/CardContainer";
+
 
 function App() {
   const [albums, setAlbums] = useState([]);
@@ -27,18 +28,19 @@ function App() {
         imageCover: album.artworkUrl100,
         albumName: album.collectionName,
         artistName: album.artistName,
-        price: album.collectionPrice+' '+album.currency
+        price: album.collectionPrice+' '+album.currency,
+        id: album.collectionId
       };
       return container;
     })
 
     // Updating Albums
     setAlbums(cleanedResults);
-    console.log(albums);
     }catch(e){
       console.log(e)
     }
   }
+  // Show the albums if the artist searched has them
   const showAlbums = () => {
     if (albums.length === 0) {
       return (

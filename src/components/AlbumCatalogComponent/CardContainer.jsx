@@ -5,8 +5,8 @@ const CardContainer = ({albumsList}) => {
       <div className="container">
         <div className="row">
           {albumsList.map((album) => (
-            <div className="col">
-              <Card albumData={album}/>
+            <div className="col" key={album.id}>
+              <Card albumData={album} />
             </div>
           ))}
         </div>
